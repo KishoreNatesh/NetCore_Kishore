@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.2 on win32)" generated="20201122 19:06:50.478" rpa="false">
+<suite id="s1" name="FlipkartScrap &amp; LoginTestSuite">
+<suite id="s1-s1" name="FlipkartScrap" source="C:\Users\Kisho\PycharmProjects\NetCore\TestCases\FlipkartScrap.robot">
+<test id="s1-s1-t1" name="Pass url to scrap from flipkart">
+<kw name="Scrap From Flipkart To Csv" library="FlipkartScrapper">
+<arguments>
+<arg>https://www.flipkart.com/search?q=iphone&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;as-pos=1&amp;p%5B%5D=facets.price_range.from%3DMin&amp;p%5B%5D=facets.price_range.to%3D40000</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:06:50.972" endtime="20201122 19:06:51.603"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:06:50.971" endtime="20201122 19:06:51.603" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201122 19:06:50.501" endtime="20201122 19:06:51.605"></status>
+</suite>
+<suite id="s1-s2" name="LoginTestSuite" source="C:\Users\Kisho\PycharmProjects\NetCore\TestCases\LoginTestSuite.robot">
+<test id="s1-s2-t1" name="To verify Successful login with valid credentials">
+<kw name="Launch browser" library="LoginPage">
+<arguments>
+<arg>Flipkart</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${NetCore.${setup}}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20201122 19:06:51.728" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com'.</msg>
+<status status="PASS" starttime="20201122 19:06:51.727" endtime="20201122 19:06:55.857"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201122 19:06:55.857" endtime="20201122 19:06:57.971"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:06:51.727" endtime="20201122 19:06:57.972"></status>
+</kw>
+<kw name="Enter email address" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:06:57.973" endtime="20201122 19:06:57.983"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${number}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:06:57.983" endtime="20201122 19:06:58.023"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>${D_UserEmail.${emailaddress}}</arg>
+</arguments>
+<msg timestamp="20201122 19:06:58.023" level="INFO">Typing text '9036300227' into text field 'Xpath=//div[label[span[contains(text(),'Enter Email/Mobile number')]]]/input'.</msg>
+<status status="PASS" starttime="20201122 19:06:58.023" endtime="20201122 19:06:58.089"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:06:57.972" endtime="20201122 19:06:58.090"></status>
+</kw>
+<kw name="Enter password" library="LoginPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:06:58.090" endtime="20201122 19:06:58.125"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+<arg>${D_Password.${credentials}}</arg>
+</arguments>
+<msg timestamp="20201122 19:06:58.125" level="INFO">Typing text 'NetCore@123' into text field 'Xpath=//div[label[span[contains(text(),'Enter Password')]]]/input'.</msg>
+<status status="PASS" starttime="20201122 19:06:58.125" endtime="20201122 19:06:58.185"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:06:58.090" endtime="20201122 19:06:58.185"></status>
+</kw>
+<kw name="Click on Login button" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginBtn}</arg>
+</arguments>
+<msg timestamp="20201122 19:06:58.186" level="INFO">Clicking element 'Xpath=//button//span[contains(text(),'Login')]'.</msg>
+<status status="PASS" starttime="20201122 19:06:58.185" endtime="20201122 19:06:58.230"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:06:58.185" endtime="20201122 19:06:58.230"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201122 19:06:58.231" endtime="20201122 19:07:00.321"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:06:51.726" endtime="20201122 19:07:00.322" critical="yes"></status>
+</test>
+<test id="s1-s2-t2" name="To Verify login with incorrect email">
+<kw name="Launch browser" library="LoginPage">
+<arguments>
+<arg>Flipkart</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${NetCore.${setup}}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:00.324" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com'.</msg>
+<status status="PASS" starttime="20201122 19:07:00.324" endtime="20201122 19:07:04.438"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201122 19:07:04.439" endtime="20201122 19:07:06.551"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:00.324" endtime="20201122 19:07:06.551"></status>
+</kw>
+<kw name="Enter email address" library="LoginPage">
+<arguments>
+<arg>incorrect</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:06.552" endtime="20201122 19:07:06.565"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${number}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:06.565" endtime="20201122 19:07:06.607"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>${D_UserEmail.${emailaddress}}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:06.608" level="INFO">Typing text '9036300277' into text field 'Xpath=//div[label[span[contains(text(),'Enter Email/Mobile number')]]]/input'.</msg>
+<status status="PASS" starttime="20201122 19:07:06.607" endtime="20201122 19:07:06.671"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:06.552" endtime="20201122 19:07:06.671"></status>
+</kw>
+<kw name="Enter password" library="LoginPage">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:06.672" endtime="20201122 19:07:06.704"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+<arg>${D_Password.${credentials}}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:06.704" level="INFO">Typing text 'NetCore@123' into text field 'Xpath=//div[label[span[contains(text(),'Enter Password')]]]/input'.</msg>
+<status status="PASS" starttime="20201122 19:07:06.704" endtime="20201122 19:07:06.765"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:06.672" endtime="20201122 19:07:06.766"></status>
+</kw>
+<kw name="Click on Login button" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginBtn}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:06.766" level="INFO">Clicking element 'Xpath=//button//span[contains(text(),'Login')]'.</msg>
+<status status="PASS" starttime="20201122 19:07:06.766" endtime="20201122 19:07:06.811"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:06.766" endtime="20201122 19:07:06.811"></status>
+</kw>
+<kw name="Verify invalid credentials error message" library="commonObjects">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${incorrectmessage}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:06.812" endtime="20201122 19:07:07.031"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${incorrectmessage}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:07.036" level="INFO">Current page contains element 'xpath=//span[contains(text(),'Your username or password is incorrect')]'.</msg>
+<status status="PASS" starttime="20201122 19:07:07.031" endtime="20201122 19:07:07.036"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:06.812" endtime="20201122 19:07:07.036"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201122 19:07:07.036" endtime="20201122 19:07:09.128"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:00.323" endtime="20201122 19:07:09.128" critical="yes"></status>
+</test>
+<test id="s1-s2-t3" name="To Verify login with incorrect password">
+<kw name="Launch browser" library="LoginPage">
+<arguments>
+<arg>Flipkart</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${NetCore.${setup}}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:09.131" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com'.</msg>
+<status status="PASS" starttime="20201122 19:07:09.130" endtime="20201122 19:07:13.219"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201122 19:07:13.219" endtime="20201122 19:07:15.333"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:09.130" endtime="20201122 19:07:15.334"></status>
+</kw>
+<kw name="Enter email address" library="LoginPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:15.334" endtime="20201122 19:07:15.347"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${number}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:15.347" endtime="20201122 19:07:15.389"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${number}</arg>
+<arg>${D_UserEmail.${emailaddress}}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:15.390" level="INFO">Typing text '9036300227' into text field 'Xpath=//div[label[span[contains(text(),'Enter Email/Mobile number')]]]/input'.</msg>
+<status status="PASS" starttime="20201122 19:07:15.390" endtime="20201122 19:07:15.455"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:15.334" endtime="20201122 19:07:15.455"></status>
+</kw>
+<kw name="Enter password" library="LoginPage">
+<arguments>
+<arg>incorrect</arg>
+</arguments>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:15.456" endtime="20201122 19:07:15.489"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+<arg>${D_Password.${credentials}}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:15.490" level="INFO">Typing text 'abcxyz' into text field 'Xpath=//div[label[span[contains(text(),'Enter Password')]]]/input'.</msg>
+<status status="PASS" starttime="20201122 19:07:15.489" endtime="20201122 19:07:15.545"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:15.456" endtime="20201122 19:07:15.545"></status>
+</kw>
+<kw name="Click on Login button" library="LoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LoginBtn}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:15.546" level="INFO">Clicking element 'Xpath=//button//span[contains(text(),'Login')]'.</msg>
+<status status="PASS" starttime="20201122 19:07:15.545" endtime="20201122 19:07:15.592"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:15.545" endtime="20201122 19:07:15.592"></status>
+</kw>
+<kw name="Verify invalid credentials error message" library="commonObjects">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${incorrectmessage}</arg>
+</arguments>
+<status status="PASS" starttime="20201122 19:07:15.593" endtime="20201122 19:07:16.017"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${incorrectmessage}</arg>
+</arguments>
+<msg timestamp="20201122 19:07:16.023" level="INFO">Current page contains element 'xpath=//span[contains(text(),'Your username or password is incorrect')]'.</msg>
+<status status="PASS" starttime="20201122 19:07:16.017" endtime="20201122 19:07:16.023"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:15.593" endtime="20201122 19:07:16.023"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201122 19:07:16.023" endtime="20201122 19:07:18.113"></status>
+</kw>
+<status status="PASS" starttime="20201122 19:07:09.129" endtime="20201122 19:07:18.114" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201122 19:06:51.606" endtime="20201122 19:07:18.115"></status>
+</suite>
+<status status="PASS" starttime="20201122 19:06:50.479" endtime="20201122 19:07:18.118"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="FlipkartScrap &amp; LoginTestSuite">FlipkartScrap &amp; LoginTestSuite</stat>
+<stat pass="1" fail="0" id="s1-s1" name="FlipkartScrap">FlipkartScrap &amp; LoginTestSuite.FlipkartScrap</stat>
+<stat pass="3" fail="0" id="s1-s2" name="LoginTestSuite">FlipkartScrap &amp; LoginTestSuite.LoginTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

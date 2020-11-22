@@ -1,0 +1,10 @@
+NetCore:
+  Flipkart: https://www.flipkart.com
+
+D_UserEmail:
+  Flipkart: 9036300227
+  incorrect: 9036300277
+
+D_Password:
+  Flipkart: NetCore@123
+  incorrect: abcxyz
